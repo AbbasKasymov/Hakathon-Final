@@ -60,8 +60,11 @@ const reducer = (state = initState, action) => {
 const ClientContext = (props) => {
   const [state, dispatch] = useReducer(reducer, initState);
 
-  const getProduct = async () => {
-    const response = await axios(api);
+  const getProduct = async (params) => {
+    console.log(params);
+
+    const response = await axios(`${api}?${params}`);
+    console.log(response.data);
     const action = {
       type: "GET_PRODUCT",
       payload: response.data,
