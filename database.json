@@ -1,0 +1,148 @@
+{
+  "products": [
+    {
+      "name": "iPhone 13",
+      "description": "Starting at $33.34/mo. for 24 mos. with $0 down (+tax & before promotion)",
+      "price": 1100,
+      "image": "https://cdn.tmobile.com/content/dam/t-mobile/en-p/cell-phones/apple/Apple-iPhone-13/Green/Apple-iPhone-13-Green-frontimage.png",
+      "memory": "128",
+      "color": "blue",
+      "category": "Cell phones",
+      "id": 1
+    },
+    {
+      "name": "APPLE iPhone 13 Pro",
+      "description": "Starting at $41.67/mo. for 24 mos. with $0 down (+tax & before promotion)",
+      "price": 1200,
+      "image": "https://t-mobile.scene7.com/is/image/Tmusprod/Apple-iPhone-13-Pro-Sierra-Blue-rightimage",
+      "memory": "32",
+      "color": "blue",
+      "category": "Cell phones",
+      "feedbacks": [],
+      "likes": 0,
+      "id": 2,
+      "feedback": [
+        {
+          "title": "`;l,;l;l",
+          "user": "edf"
+        }
+      ]
+    },
+    {
+      "name": " APPLE iPhone SE (3rd gen)",
+      "description": "Starting at $17.92/mo. for 24 mos. with $0 down (+tax & before promotion)",
+      "price": 880,
+      "image": "https://t-mobile.scene7.com/is/image/Tmusprod/Apple-iPhone-SE-3rd-gen-Midnight-frontimage",
+      "memory": "64",
+      "color": "black",
+      "category": "Cell phones",
+      "feedbacks": [],
+      "likes": 0,
+      "id": 3
+    },
+    {
+      "name": " APPLE iPhone 13 mini",
+      "description": "Starting at $29.17/mo. for 24 mos. with $0 down (+tax & before promotion)",
+      "price": 800,
+      "image": "https://t-mobile.scene7.com/is/image/Tmusprod/Apple-iPhone-13-mini-PRODUCT-RED-frontimage",
+      "memory": "16",
+      "color": "red",
+      "category": "Cell phones",
+      "id": 4
+    },
+    {
+      "name": " APPLE iPhone 13 Pro Max",
+      "description": "Navigate to reviews Starting at $45.84/mo. for 24 mos. with $0 down (+tax & before promotion)",
+      "price": 1350,
+      "image": "https://t-mobile.scene7.com/is/image/Tmusprod/Apple-iPhone-13-Pro-Max-Gold-frontimage",
+      "memory": "8",
+      "color": "white",
+      "category": "Cell phones",
+      "feedbacks": [],
+      "likes": 0,
+      "id": 5
+    },
+    {
+      "name": " APPLE iPhone 12 mini",
+      "description": "iPhone 12 mini packs big features in a 5.4-inch design. 5G to download movies on the fly and stream high-quality video. A beautifully bright and compact Super Retina XDR display. Ceramic Shield with 4x better drop performance. Incredible low-light photography with Night mode on all cameras. Cinema-grade Dolby Vision HDR video recording, editing, and playback. Powerful A14 Bionic chip. And new MagSafe accessories for easy attach and faster wireless charging. It’s big news for mini.",
+      "price": 930,
+      "image": "https://cdn.tmobile.com/content/dam/t-mobile/en-p/cell-phones/apple/Apple-iPhone-12-mini/Black/Apple-iPhone-12-mini-Black-frontimage.png",
+      "memory": "128",
+      "color": "black",
+      "category": "Cell phones",
+      "feedbacks": [],
+      "likes": 0,
+      "id": 6
+    },
+    {
+      "name": " APPLE iPhone 12 Pro Max",
+      "description": "iPhone 12 Pro Max. 5G to download huge files on the go and stream HDR video. Larger 6.7-inch Super Retina XDR display. Ceramic Shield with 4x better drop performance. Incredible low-light photography with the best Pro camera system on an iPhone, and 5x optical zoom range. Cinema-grade Dolby Vision video recording, editing, and playback. Night mode portraits and next-level AR experiences with the LiDAR Scanner. Powerful A14 Bionic chip. And new MagSafe accessories for easy attach and faster wireless charging. For infinitely spectacular possibilities.",
+      "price": 980,
+      "image": "https://t-mobile.scene7.com/is/image/Tmusprod/Apple-iPhone-12-Pro-Max-Pacific-Blue-frontimage",
+      "memory": "64",
+      "color": "blue",
+      "category": "Cell phones",
+      "feedbacks": [],
+      "likes": 0,
+      "id": 7
+    },
+    {
+      "name": " SAMSUNG Galaxy S22",
+      "description": "The Samsung Galaxy S22 sets a new epic standard with 8K video capture, the highest recording resolution available on a smartphone. Enjoy your favorite content on a bright, beautiful 6.1” FHD+ Dynamic AMOLED display with adaptive 120Hz refresh rate. Capture vivid detail with a triple lens camera and a 50MP resolution main lens with up to 30X digital zoom. Power every scroll, click, tap and stream all day long with an intelligent 3700 mAh battery that keeps your day going. Wait less and do more of what you love, with the incredibly fast 4nm processor all on the nation’s largest, fastest and most reliable nationwide 5G network*.",
+      "price": 550,
+      "image": "https://t-mobile.scene7.com/is/image/Tmusprod/Samsung-Galaxy-S22-Phantom-Black-frontimage",
+      "memory": "64",
+      "color": "black",
+      "category": "Cell phones",
+      "id": 8
+    },
+    {
+      "name": " SAMSUNG Galaxy S22 Ultra",
+      "description": "The Samsung Galaxy S22 Ultra offers the ultimate epic standard of smartphone experiences bringing back the best of Galaxy Note to the S22 line with an embedded SPen enabling new ways to work and create on the go. The quad cameras let you capture premium detail with the ultra-clear 108MP main lens, the highest resolution available on a smartphone. Shoot videos that rival how epic your life is with stunning 8K recording. Your favorite content will look even better on the amazingly bright 6.8” WQHD+ Dynamic AMOLED 2X display with adaptive 120Hz refresh rate. The Galaxy S22 Ultra’s long lasting 5000 mAh intelligent battery powers your day and then some. Do more of what you love, with the incredibly fast 4nm processor, all on the nation’s largest, fastest, and most reliable nationwide 5G network*.",
+      "price": 840,
+      "image": "https://t-mobile.scene7.com/is/image/Tmusprod/Samsung-Galaxy-S22-Ultra-Burgund-frontimage",
+      "memory": "128",
+      "color": "pink",
+      "category": "Cell phones",
+      "feedbacks": [],
+      "likes": 0,
+      "id": 9
+    },
+    {
+      "name": " ONEPLUS 10 Pro 5G",
+      "description": "Introducing the OnePlus 10 Pro 5G, our most powerful smartphone ever. Unleash your creativity with a triple-camera system co-developed with Hasselblad, featuring the new OnePlus Billion Color Solution and a wider 150° FOV Ultra-Wide lens. A 6.7” QHD+ screen displays stunning colors and adjusts dynamically from 1Hz up to 120Hz, delivering the smoothest & most battery-efficient user experience. Powering the 10 Pro is the latest Qualcomm Snapdragon 8 Gen 1 Processor. Coupled with the new HyperBoost Gaming Engine and next-gen heat dissipation, the 10 Pro is one of the best choices for mobile gaming. Say goodbye to battery anxiety with 65W fast charging (wired) and 50W wireless charging, giving you a day’s power in 15 minutes. Packed with premium features & a smooth and clean interface, the 10 Pro is best smartphone from OnePlus yet.",
+      "price": 450,
+      "image": "https://cdn.tmobile.com/content/dam/t-mobile/en-p/cell-phones/OnePlus/OnePlus-10-Pro-5G/Volcanic-Black/OnePlus-10-Pro-5G-Volcanic-Black-frontimage.png",
+      "memory": "32",
+      "color": "white",
+      "category": "Cell phones",
+      "feedbacks": [],
+      "likes": 0,
+      "id": 10
+    },
+    {
+      "name": " GOOGLE Pixel 6 Pro",
+      "description": "Introducing Pixel 6 Pro, the completely redesigned, fully loaded Google phone. The Pixel Camera system includes a pro-level telephoto lens with 4x optical zoom. Its main sensor captures 150% more light, bringing vivid color and greater accuracy to photos.4 Pixel’s 6.7-inch Smooth Display can intelligently adjust up to 120Hz for easy scrolling and responsive gaming.5 With the next-gen TitanM2TM security chip, Pixel helps protect you, your data, and your privacy, and keeps you in control. And with the Google Tensor processor, it’s the smartest and fastest Pixel yet – up to 80% faster than Pixel 5.6",
+      "price": 920,
+      "image": "https://t-mobile.scene7.com/is/image/Tmusprod/Google-Pixel-6-Pro-Stormy-Black-frontimage",
+      "memory": "32",
+      "color": "yellow",
+      "category": "Cell phones",
+      "feedbacks": [],
+      "likes": 0,
+      "id": 11
+    },
+    {
+      "name": " APPLE iPad Air 5th gen",
+      "description": "iPad Air. With an immersive 10.9-inch Liquid Retina display.1 The breakthrough Apple M1 chip delivers faster performance, making iPad Air a creative and mobile gaming powerhouse. Featuring Touch ID, advanced cameras, blazing-fast 5G2 and Wi-Fi 6, USB-C, and support for Magic Keyboard and Apple Pencil (2nd generation).3",
+      "price": 1250,
+      "image": "https://t-mobile.scene7.com/is/image/Tmusprod/Apple-iPad-Air-5th-gen-Purple-frontimage",
+      "memory": "8",
+      "color": "white",
+      "category": "Tablets",
+      "feedbacks": [],
+      "likes": 0,
+      "id": 12
+    }
+  ]
+}
