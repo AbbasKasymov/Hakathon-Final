@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Akshar:wght@400;700&display=swap");
 
+* a {
+  text-decoration: none !important;
+  color: unset !important;
+}
+
 * {
   font-family: "Akshar", sans-serif;
 }
@@ -22,7 +27,7 @@ a {
 }
 
 .under-navbar {
-  background-color: grey;
+  background-color: #dcdcdc;
 }
 .sidebar {
   background-color: grey;
@@ -131,4 +136,28 @@ a {
 .feedback h5 {
   font-size: 20px;
   margin: 0;
+}
+.payment-modal {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 15px;
+}
+.cards-icons img {
+  width: 30%;
+}
+.exp-date {
+  margin-right: 20px;
+}
+.payment-data {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 15px;
+  justify-content: space-between;
+}
+
+.exp-date {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 15px;
+  justify-content: space-between;
 }

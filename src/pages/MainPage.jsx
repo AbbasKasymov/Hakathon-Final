@@ -4,6 +4,7 @@ import { clientContext } from "../contexts/ClientContext";
 import ProductCard from "../components/ProductCard";
 import MyPagination from "../components/MyPagination";
 import FiltersBlock from "../components/FiltersBlock";
+import CouruselComp from "../components/CouruselComp";
 
 const MainPage = () => {
   const data = useContext(clientContext);
@@ -16,6 +17,7 @@ const MainPage = () => {
 
   return (
     <div>
+      <CouruselComp />
       <Container>
         <FiltersBlock getProduct={getProduct} products={products} />
         <div className="products-list">
@@ -23,7 +25,7 @@ const MainPage = () => {
             <ProductCard key={item.id} item={item} />
           ))}
         </div>
-        <MyPagination />
+        <MyPagination category="products" />
       </Container>
     </div>
   );

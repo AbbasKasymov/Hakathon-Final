@@ -74,18 +74,19 @@ const ClientContext = (props) => {
 
   const productsPerPage = 6;
   const [currentPage, setCurrentPage] = useState(1);
-
+  const [currentCategory, setCurrentCategory] = useState("products");
   const indexOfLastProduct = currentPage * productsPerPage;
   const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
 
-  const products = state.products.slice(
+  const products = state[`${currentCategory}`].slice(
     indexOfFirstProduct,
     indexOfLastProduct
   );
 
   const totalCount = state.products.length;
 
-  const handlePagination = (page) => {
+  const handlePagination = (page, category) => {
+    setCurrentCategory(category);
     setCurrentPage(page);
   };
 
@@ -261,7 +262,7 @@ const ClientContext = (props) => {
     dispatch(action);
   };
   const getHotspots = async () => {
-    const response = await axios(`${api}?category=Hotspotes & more`);
+    const response = await axios(`${api}?category=Hotspotes`);
     const action = {
       type: "GET_HOTSPOTS",
       payload: response.data,

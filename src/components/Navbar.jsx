@@ -1,364 +1,3 @@
-// import * as React from "react";
-// import AppBar from "@mui/material/AppBar";
-// import Box from "@mui/material/Box";
-// import Toolbar from "@mui/material/Toolbar";
-// import IconButton from "@mui/material/IconButton";
-// import Typography from "@mui/material/Typography";
-// import Menu from "@mui/material/Menu";
-// import MenuIcon from "@mui/icons-material/Menu";
-// import Container from "@mui/material/Container";
-// import Avatar from "@mui/material/Avatar";
-// import Button from "@mui/material/Button";
-// import Tooltip from "@mui/material/Tooltip";
-// import MenuItem from "@mui/material/MenuItem";
-// import { Link } from "react-router-dom";
-// import {
-//   Badge,
-//   CssBaseline,
-//   Divider,
-//   Drawer,
-//   List,
-//   ListItem,
-//   ListItemButton,
-//   ListItemIcon,
-//   ListItemText,
-//   Stack,
-// } from "@mui/material";
-// import { Logout, ShoppingCart } from "@mui/icons-material";
-// import PhoneIphoneSharpIcon from "@mui/icons-material/PhoneIphoneSharp";
-// import { clientContext } from "../contexts/ClientContext";
-// import InboxIcon from "@mui/icons-material/Inbox";
-// import DraftsIcon from "@mui/icons-material/Drafts";
-// import FiveGIcon from "@mui/icons-material/FiveG";
-// import TabletMacIcon from "@mui/icons-material/TabletMac";
-// import WatchIcon from "@mui/icons-material/Watch";
-// import CastIcon from "@mui/icons-material/Cast";
-// import HeadsetIcon from "@mui/icons-material/Headset";
-// import MailIcon from "@mui/icons-material/Mail";
-
-// const settings = ["Profile", "Account", "Dashboard", "Logout"];
-
-// const Navbar = () => {
-//   const data = React.useContext(clientContext);
-//   const { cartCount, authWithGoogle, user, logout } = data;
-
-//   const [anchorElNav, setAnchorElNav] = React.useState(null);
-//   const [anchorElUser, setAnchorElUser] = React.useState(null);
-//   const drawerWidth = 240;
-
-//   const handleOpenNavMenu = (event) => {
-//     setAnchorElNav(event.currentTarget);
-//   };
-//   const handleOpenUserMenu = (event) => {
-//     setAnchorElUser(event.currentTarget);
-//   };
-
-//   const handleCloseNavMenu = () => {
-//     setAnchorElNav(null);
-//   };
-
-//   const handleCloseUserMenu = () => {
-//     setAnchorElUser(null);
-//   };
-
-//   return (
-//     <React.Fragment>
-//       <Box sx={{ display: "flex" }}>
-//         <CssBaseline />
-//         <AppBar
-//           position="fixed"
-//           sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}
-//         >
-//           <Container maxWidth="xl">
-//             <Toolbar disableGutters>
-//               <Typography
-//                 variant="h6"
-//                 noWrap
-//                 component="div"
-//                 sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
-//               >
-//                 <Link to="/">
-//                   <img
-//                     width={50}
-//                     src="https://assets.flagfamily.com/web/images/articles/color-t-mobile-logo-1629114229.png?xezmKhSwED7lKCYlMSVqsTlw6ruCWaZQ"
-//                     alt=""
-//                   />
-//                 </Link>
-//               </Typography>
-
-//               <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
-//                 <IconButton
-//                   size="large"
-//                   aria-label="account of current user"
-//                   aria-controls="menu-appbar"
-//                   aria-haspopup="true"
-//                   onClick={handleOpenNavMenu}
-//                   color="inherit"
-//                 >
-//                   <MenuIcon />
-//                 </IconButton>
-//                 <Menu
-//                   id="menu-appbar"
-//                   anchorEl={anchorElNav}
-//                   anchorOrigin={{
-//                     vertical: "bottom",
-//                     horizontal: "left",
-//                   }}
-//                   keepMounted
-//                   transformOrigin={{
-//                     vertical: "top",
-//                     horizontal: "left",
-//                   }}
-//                   open={Boolean(anchorElNav)}
-//                   onClose={handleCloseNavMenu}
-//                   sx={{
-//                     display: { xs: "block", md: "none" },
-//                   }}
-//                 >
-//                   <Link to="/admin-panel">
-//                     {" "}
-//                     <MenuItem onClick={handleCloseNavMenu}>
-//                       <Typography textAlign="center">Admin Panel</Typography>
-//                     </MenuItem>
-//                   </Link>
-//                   <Link to="/admin-panel/add">
-//                     {" "}
-//                     <MenuItem onClick={handleCloseNavMenu}>
-//                       <Typography textAlign="center">Add Products</Typography>
-//                     </MenuItem>
-//                   </Link>
-//                 </Menu>
-//               </Box>
-//               <Typography
-//                 variant="h6"
-//                 noWrap
-//                 component="div"
-//                 sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}
-//               >
-//                 <Link to="/">
-//                   <img
-//                     width={50}
-//                     src="https://assets.flagfamily.com/web/images/articles/color-t-mobile-logo-1629114229.png?xezmKhSwED7lKCYlMSVqsTlw6ruCWaZQ"
-//                     alt=""
-//                   />
-//                 </Link>
-//               </Typography>
-//               <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-//                 <Link to="/admin-panel">
-//                   {" "}
-//                   <Button sx={{ my: 2, color: "white", display: "block" }}>
-//                     Admin Panel
-//                   </Button>
-//                 </Link>
-//                 <Link to="/admin-panel/add">
-//                   {" "}
-//                   <Button sx={{ my: 2, color: "white", display: "block" }}>
-//                     Add Product
-//                   </Button>
-//                 </Link>
-//               </Box>
-
-//               <Box
-//                 style={{ display: "flex", alignItems: "center" }}
-//                 sx={{ flexGrow: 0 }}
-//               >
-//                 <Link to="/cart" style={{ marginRight: 10 }}>
-//                   <Badge badgeContent={cartCount} color="error">
-//                     <ShoppingCart />
-//                   </Badge>
-//                 </Link>
-//                 {user ? (
-//                   <>
-//                     <Avatar
-//                       style={{ marginRight: 10 }}
-//                       src={user.photoURL}
-//                       alt={user.displayName}
-//                     />
-//                     <span style={{ marginRight: 10 }}>{user.email}</span>
-
-//                     <Button onClick={logout}>
-//                       <Logout color="error" />
-//                     </Button>
-//                   </>
-//                 ) : (
-//                   <Button
-//                     variant="outlined"
-//                     color="error"
-//                     onClick={authWithGoogle}
-//                   >
-//                     Sign In
-//                   </Button>
-//                 )}
-//               </Box>
-//             </Toolbar>
-//           </Container>
-//         </AppBar>
-//         <Drawer
-//           variant="permanent"
-//           sx={{
-//             width: drawerWidth,
-//             flexShrink: 0,
-//             [`& .MuiDrawer-paper`]: {
-//               width: drawerWidth,
-//               boxSizing: "border-box",
-//             },
-//           }}
-//         >
-//           <Toolbar />
-//           <div className="sidebar">
-//             <Box sx={{ overflow: "auto" }}>
-//               <h2 style={{ padding: "0 16px" }}>Shop</h2>
-//               <Divider />
-// <List>
-//   <Link to="/admin-panel">
-//     <ListItem disablePadding>
-//       <ListItemButton>
-//         <ListItemIcon>
-//           <PhoneIphoneSharpIcon />
-//         </ListItemIcon>
-//         <ListItemText primary="Cell phones" />
-//       </ListItemButton>
-//     </ListItem>
-//   </Link>
-//   <Link to="/admin-panel">
-//     <ListItem disablePadding>
-//       <ListItemButton>
-//         <ListItemIcon>
-//           <FiveGIcon />
-//         </ListItemIcon>
-//         <ListItemText primary="5G phones" />
-//       </ListItemButton>
-//     </ListItem>
-//   </Link>
-//   <Link to="/admin-panel">
-//     <ListItem disablePadding>
-//       <ListItemButton>
-//         <ListItemIcon>
-//           <TabletMacIcon />
-//         </ListItemIcon>
-//         <ListItemText primary="Tablets" />
-//       </ListItemButton>
-//     </ListItem>
-//   </Link>
-//   <Link to="/admin-panel">
-//     <ListItem disablePadding>
-//       <ListItemButton>
-//         <ListItemIcon>
-//           <WatchIcon />
-//         </ListItemIcon>
-//         <ListItemText primary="Smartwatches" />
-//       </ListItemButton>
-//     </ListItem>
-//   </Link>
-//   <Link to="/admin-panel">
-//     <ListItem disablePadding>
-//       <ListItemButton>
-//         <ListItemIcon>
-//           <CastIcon />
-//         </ListItemIcon>
-//         <ListItemText primary="Hotspot & more" />
-//       </ListItemButton>
-//     </ListItem>
-//   </Link>
-//   <Link to="/admin-panel">
-//     <ListItem disablePadding>
-//       <ListItemButton>
-//         <ListItemIcon>
-//           <HeadsetIcon />
-//         </ListItemIcon>
-//         <ListItemText primary="Asseccories" />
-//       </ListItemButton>
-//     </ListItem>
-//   </Link>
-// </List>
-// <Divider />
-// <List>
-//   {["All mail", "Trash", "Spam"].map((text, index) => (
-//     <ListItem button key={text}>
-//       <ListItemIcon>
-//         {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-//       </ListItemIcon>
-//       <ListItemText primary={text} />
-//     </ListItem>
-//   ))}
-// </List>
-//             </Box>
-//           </div>
-//         </Drawer>
-//         <Box component="main" sx={{ flexGrow: 1, p: 0 }}>
-//           <Toolbar />
-//           <section className="under-navbar">
-//             <Container>
-//               <List component={Stack} direction="row">
-//                 <Link to="/admin-panel">
-//                   <ListItem disablePadding>
-//                     <ListItemButton component={Stack} direction="column">
-//                       <ListItemIcon style={{ marginLeft: "20px" }}>
-//                         <PhoneIphoneSharpIcon />
-//                       </ListItemIcon>
-//                       <ListItemText primary="Cell phones" />
-//                     </ListItemButton>
-//                   </ListItem>
-//                 </Link>
-//                 <Link to="/admin-panel">
-//                   <ListItem disablePadding>
-//                     <ListItemButton component={Stack} direction="column">
-//                       <ListItemIcon style={{ marginLeft: "20px" }}>
-//                         <FiveGIcon />
-//                       </ListItemIcon>
-//                       <ListItemText primary="5G phones" />
-//                     </ListItemButton>
-//                   </ListItem>
-//                 </Link>
-//                 <Link to="/admin-panel">
-//                   <ListItem disablePadding>
-//                     <ListItemButton component={Stack} direction="column">
-//                       <ListItemIcon style={{ marginLeft: "30px" }}>
-//                         <TabletMacIcon />
-//                       </ListItemIcon>
-//                       <ListItemText primary="Tablets" />
-//                     </ListItemButton>
-//                   </ListItem>
-//                 </Link>
-//                 <Link to="/admin-panel">
-//                   <ListItem disablePadding>
-//                     <ListItemButton component={Stack} direction="column">
-//                       <ListItemIcon style={{ marginLeft: "20px" }}>
-//                         <WatchIcon />
-//                       </ListItemIcon>
-//                       <ListItemText primary="Smartwatches" />
-//                     </ListItemButton>
-//                   </ListItem>
-//                 </Link>
-//                 <Link to="/admin-panel">
-//                   <ListItem disablePadding>
-//                     <ListItemButton component={Stack} direction="column">
-//                       <ListItemIcon style={{ marginLeft: "20px" }}>
-//                         <CastIcon />
-//                       </ListItemIcon>
-//                       <ListItemText primary="Hotspot & more" />
-//                     </ListItemButton>
-//                   </ListItem>
-//                 </Link>
-//                 <Link to="/admin-panel">
-//                   <ListItem disablePadding>
-//                     <ListItemButton component={Stack} direction="column">
-//                       <ListItemIcon style={{ marginLeft: "20px" }}>
-//                         <HeadsetIcon />
-//                       </ListItemIcon>
-//                       <ListItemText primary="Asseccories" />
-//                     </ListItemButton>
-//                   </ListItem>
-//                 </Link>
-//               </List>
-//             </Container>
-//           </section>
-//         </Box>
-//       </Box>
-//     </React.Fragment>
-//   );
-// };
-// export default Navbar;
 import * as React from "react";
 import { styled, useTheme } from "@mui/material/styles";
 import Box from "@mui/material/Box";
@@ -507,6 +146,7 @@ export default function MiniDrawer() {
           position="fixed"
           //   sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}
           open={open}
+          style={{ backgroundColor: "black" }}
         >
           <Container maxWidth="xl">
             <Toolbar disableGutters>
@@ -530,8 +170,9 @@ export default function MiniDrawer() {
               >
                 <Link to="/">
                   <img
-                    width={50}
-                    src="https://assets.flagfamily.com/web/images/articles/color-t-mobile-logo-1629114229.png?xezmKhSwED7lKCYlMSVqsTlw6ruCWaZQ"
+                    width={100}
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ22gWEjrRUq_FpC6Rdzj9KV_ixac7njAjgwbjfjriknmN1PzpIdsJEXo-VL-5PLKjk3mE&usqp=CAU"
+                    // src="https://assets.flagfamily.com/web/images/articles/color-t-mobile-logo-1629114229.png?xezmKhSwED7lKCYlMSVqsTlw6ruCWaZQ"
                     alt=""
                   />
                 </Link>
@@ -545,6 +186,7 @@ export default function MiniDrawer() {
                   aria-haspopup="true"
                   onClick={handleOpenNavMenu}
                   color="inherit"
+                  style={{ color: "black" }}
                 >
                   <MenuIcon />
                 </IconButton>
@@ -569,7 +211,12 @@ export default function MiniDrawer() {
                   <Link to="/admin-panel">
                     {" "}
                     <MenuItem onClick={handleCloseNavMenu}>
-                      <Typography textAlign="center">Admin Panel</Typography>
+                      <Typography
+                        textAlign="center"
+                        style={{ color: "black", background: "black" }}
+                      >
+                        Admin Panel
+                      </Typography>
                     </MenuItem>
                   </Link>
                   <Link to="/admin-panel/add">
@@ -588,8 +235,9 @@ export default function MiniDrawer() {
               >
                 <Link to="/">
                   <img
-                    width={50}
-                    src="https://assets.flagfamily.com/web/images/articles/color-t-mobile-logo-1629114229.png?xezmKhSwED7lKCYlMSVqsTlw6ruCWaZQ"
+                    width={100}
+                    src="https://i.ytimg.com/vi/WaR8UOQ2p4k/maxresdefault.jpg"
+                    // src="https://assets.flagfamily.com/web/images/articles/color-t-mobile-logo-1629114229.png?xezmKhSwED7lKCYlMSVqsTlw6ruCWaZQ"
                     alt=""
                   />
                 </Link>
@@ -613,7 +261,7 @@ export default function MiniDrawer() {
                 style={{ display: "flex", alignItems: "center" }}
                 sx={{ flexGrow: 0 }}
               >
-                <Link to="/cart" style={{ marginRight: 10 }}>
+                <Link to="/cart" style={{ marginRight: 17, fontSize: "17px" }}>
                   <Badge badgeContent={cartCount} color="error">
                     <ShoppingCart />
                   </Badge>
@@ -633,9 +281,10 @@ export default function MiniDrawer() {
                   </>
                 ) : (
                   <Button
-                    variant="outlined"
-                    color="error"
+                    variant="contained"
+                    color="secondary"
                     onClick={authWithGoogle}
+                    style={{ fontSize: "17px" }}
                   >
                     Sign In
                   </Button>

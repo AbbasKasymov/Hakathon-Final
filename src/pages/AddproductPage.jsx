@@ -137,7 +137,7 @@ const AddproductPage = () => {
               <MenuItem value="5G phones">5G phones</MenuItem>
               <MenuItem value="Tablets">Tablets</MenuItem>
               <MenuItem value="Smartwatches">Smartwatches</MenuItem>
-              <MenuItem value="Hotspotes & more">Hotspotes & more</MenuItem>
+              <MenuItem value="Hotspotes">Hotspotes & more</MenuItem>
               <MenuItem value="Accessories">Accessories</MenuItem>
             </Select>
           </FormControl>
