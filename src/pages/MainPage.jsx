@@ -23,7 +23,7 @@ const MainPage = () => {
             <ProductCard key={item.id} item={item} />
           ))}
         </div>
-        <MyPagination />
+        <MyPagination category="products" />
       </Container>
     </div>
   );

@@ -56,12 +56,12 @@ const ProductDetailsPage = () => {
                 {productDetails.color}
               </li>
               <li>
-                <strong>Size:</strong>
-                {productDetails.size}
+                <strong>Memory size:</strong>
+                {productDetails.memory} GB
               </li>
               <li>
                 <strong>Description:</strong>
-                {productDetails.desc}
+                {productDetails.description}
               </li>
             </ul>
           </div>
