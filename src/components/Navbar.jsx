@@ -144,9 +144,9 @@ export default function MiniDrawer() {
         <CssBaseline />
         <AppBar
           position="fixed"
-          //   sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}
+          // sx={{ zIndex: 50 }}
           open={open}
-          // style={{ backgroundColor: "white" }}
+          style={{ height: "70px" }}
         >
           <Container maxWidth="xl">
             <Toolbar disableGutters>
@@ -170,7 +170,7 @@ export default function MiniDrawer() {
               >
                 <Link to="/">
                   <img
-                    width={50}
+                    width={83}
                     src="https://assets.flagfamily.com/web/images/articles/color-t-mobile-logo-1629114229.png?xezmKhSwED7lKCYlMSVqsTlw6ruCWaZQ"
                     alt=""
                   />
@@ -273,7 +273,7 @@ export default function MiniDrawer() {
                   </>
                 ) : (
                   <Button
-                    variant="outlined"
+                    variant="contained"
                     color="error"
                     onClick={authWithGoogle}
                   >

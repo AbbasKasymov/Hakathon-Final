@@ -156,3 +156,6 @@ a {
   margin-bottom: 15px;
   justify-content: space-between;
 }
+.carousel-item img {
+  object-fit: contain;
+}
