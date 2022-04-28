@@ -8,7 +8,8 @@
       "memory": "128",
       "color": "blue",
       "category": "Cell phones",
-      "id": 1
+      "id": 1,
+      "likes": 1
     },
     {
       "name": "APPLE iPhone 13 Pro",
@@ -48,7 +49,8 @@
       "memory": "16",
       "color": "red",
       "category": "Cell phones",
-      "id": 4
+      "id": 4,
+      "likes": 1
     },
     {
       "name": " APPLE iPhone 13 Pro Max",
@@ -59,7 +61,7 @@
       "color": "white",
       "category": "Cell phones",
       "feedbacks": [],
-      "likes": 0,
+      "likes": 1,
       "id": 5
     },
     {

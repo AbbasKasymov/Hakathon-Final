@@ -20,7 +20,7 @@ const Smartwatches = () => {
             <ProductCard key={item.id} item={item} />
           ))}
         </div>
-        <MyPagination />
+        {/* <MyPagination /> */}
       </Container>
     </div>
   );
