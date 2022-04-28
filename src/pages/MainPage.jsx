@@ -4,7 +4,7 @@ import { clientContext } from "../contexts/ClientContext";
 import ProductCard from "../components/ProductCard";
 import MyPagination from "../components/MyPagination";
 import FiltersBlock from "../components/FiltersBlock";
-import CouruselComp from "../components/CouruselComp";
+import CarouselComp from "../components/CarouselComp";
 
 const MainPage = () => {
   const data = useContext(clientContext);
