@@ -61,7 +61,7 @@
       "color": "white",
       "category": "Cell phones",
       "feedbacks": [],
-      "likes": 0,
+      "likes": 2,
       "id": 5
     },
     {
@@ -73,7 +73,7 @@
       "color": "black",
       "category": "Cell phones",
       "feedbacks": [],
-      "likes": 0,
+      "likes": 1,
       "id": 6
     },
     {
@@ -189,7 +189,7 @@
       "color": "yellow",
       "category": "Smartwatches",
       "feedbacks": [],
-      "likes": 0,
+      "likes": 1,
       "id": 16
     },
     {
@@ -201,7 +201,7 @@
       "color": "blue",
       "category": "Smartwatches",
       "feedbacks": [],
-      "likes": 0,
+      "likes": 1,
       "id": 17
     },
     {
@@ -213,7 +213,7 @@
       "color": "black",
       "category": "Smartwatches",
       "feedbacks": [],
-      "likes": 0,
+      "likes": 1,
       "id": 18
     },
     {
@@ -258,7 +258,8 @@
       "memory": "8",
       "color": "black",
       "category": "Accessories",
-      "id": 22
+      "id": 22,
+      "likes": 1
     },
     {
       "name": "GOTO GoTo™ Fine Swell 45 Case for OnePlus Nord N100",
@@ -269,7 +270,7 @@
       "color": "blue",
       "category": "Accessories",
       "feedbacks": [],
-      "likes": 0,
+      "likes": 1,
       "id": 23
     },
     {
@@ -281,7 +282,7 @@
       "color": "blue",
       "category": "Accessories",
       "feedbacks": [],
-      "likes": 0,
+      "likes": 1,
       "id": 24
     }
   ]

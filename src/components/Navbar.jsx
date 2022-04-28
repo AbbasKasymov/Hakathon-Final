@@ -146,7 +146,7 @@ export default function MiniDrawer() {
           position="fixed"
           // sx={{ zIndex: 50 }}
           open={open}
-          style={{ height: "70px" }}
+          style={{ backgroundColor: "black" }}
         >
           <Container maxWidth="xl">
             <Toolbar disableGutters>
@@ -170,8 +170,9 @@ export default function MiniDrawer() {
               >
                 <Link to="/">
                   <img
-                    width={83}
-                    src="https://assets.flagfamily.com/web/images/articles/color-t-mobile-logo-1629114229.png?xezmKhSwED7lKCYlMSVqsTlw6ruCWaZQ"
+                    width={100}
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ22gWEjrRUq_FpC6Rdzj9KV_ixac7njAjgwbjfjriknmN1PzpIdsJEXo-VL-5PLKjk3mE&usqp=CAU"
+                    // src="https://assets.flagfamily.com/web/images/articles/color-t-mobile-logo-1629114229.png?xezmKhSwED7lKCYlMSVqsTlw6ruCWaZQ"
                     alt=""
                   />
                 </Link>
@@ -185,6 +186,7 @@ export default function MiniDrawer() {
                   aria-haspopup="true"
                   onClick={handleOpenNavMenu}
                   color="inherit"
+                  style={{ color: "black" }}
                 >
                   <MenuIcon />
                 </IconButton>
@@ -209,7 +211,12 @@ export default function MiniDrawer() {
                   <Link to="/admin-panel">
                     {" "}
                     <MenuItem onClick={handleCloseNavMenu}>
-                      <Typography textAlign="center">Admin Panel</Typography>
+                      <Typography
+                        textAlign="center"
+                        style={{ color: "black", background: "black" }}
+                      >
+                        Admin Panel
+                      </Typography>
                     </MenuItem>
                   </Link>
                   <Link to="/admin-panel/add">
@@ -228,8 +235,9 @@ export default function MiniDrawer() {
               >
                 <Link to="/">
                   <img
-                    width={50}
-                    src="https://assets.flagfamily.com/web/images/articles/color-t-mobile-logo-1629114229.png?xezmKhSwED7lKCYlMSVqsTlw6ruCWaZQ"
+                    width={100}
+                    src="https://i.ytimg.com/vi/WaR8UOQ2p4k/maxresdefault.jpg"
+                    // src="https://assets.flagfamily.com/web/images/articles/color-t-mobile-logo-1629114229.png?xezmKhSwED7lKCYlMSVqsTlw6ruCWaZQ"
                     alt=""
                   />
                 </Link>
@@ -253,7 +261,7 @@ export default function MiniDrawer() {
                 style={{ display: "flex", alignItems: "center" }}
                 sx={{ flexGrow: 0 }}
               >
-                <Link to="/cart" style={{ marginRight: 10 }}>
+                <Link to="/cart" style={{ marginRight: 17, fontSize: "17px" }}>
                   <Badge badgeContent={cartCount} color="error">
                     <ShoppingCart />
                   </Badge>
@@ -274,8 +282,9 @@ export default function MiniDrawer() {
                 ) : (
                   <Button
                     variant="contained"
-                    color="error"
+                    color="secondary"
                     onClick={authWithGoogle}
+                    style={{ fontSize: "17px" }}
                   >
                     Sign In
                   </Button>
