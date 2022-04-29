@@ -5,6 +5,8 @@ import ProductCard from "../components/ProductCard";
 import MyPagination from "../components/MyPagination";
 import FiltersBlock from "../components/FiltersBlock";
 import CarouselComp from "../components/CarouselComp";
+import ImageCollage from "../components/ImageCollage";
+import Footer from "../components/Footer";
 
 const MainPage = () => {
   const data = useContext(clientContext);
@@ -27,6 +29,9 @@ const MainPage = () => {
         </div>
         <MyPagination category="products" />
       </Container>
+
+      <ImageCollage />
+      <Footer />
     </div>
   );
 };

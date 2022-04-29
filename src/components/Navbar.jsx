@@ -31,7 +31,6 @@ import { Link } from "react-router-dom";
 import { clientContext } from "../contexts/ClientContext";
 import { Logout, ShoppingCart } from "@mui/icons-material";
 import PhoneIphoneSharpIcon from "@mui/icons-material/PhoneIphoneSharp";
-import DraftsIcon from "@mui/icons-material/Drafts";
 import FiveGIcon from "@mui/icons-material/FiveG";
 import TabletMacIcon from "@mui/icons-material/TabletMac";
 import WatchIcon from "@mui/icons-material/Watch";
@@ -276,15 +275,15 @@ export default function MiniDrawer() {
                     <span style={{ marginRight: 10 }}>{user.email}</span>
 
                     <Button onClick={logout}>
-                      <Logout color="error" />
+                      <Logout style={{ color: "#FF1493" }} />
                     </Button>
                   </>
                 ) : (
                   <Button
                     variant="contained"
-                    color="secondary"
+                    // color="secondary"
                     onClick={authWithGoogle}
-                    style={{ fontSize: "17px" }}
+                    style={{ fontSize: "17px", backgroundColor: "#FF1493" }}
                   >
                     Sign In
                   </Button>

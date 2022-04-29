@@ -20,7 +20,7 @@
       "color": "blue",
       "category": "Cell phones",
       "feedbacks": [],
-      "likes": 1,
+      "likes": 3,
       "id": 2,
       "feedback": [
         {
@@ -201,7 +201,7 @@
       "color": "blue",
       "category": "Smartwatches",
       "feedbacks": [],
-      "likes": 1,
+      "likes": 2,
       "id": 17
     },
     {
@@ -259,7 +259,7 @@
       "color": "black",
       "category": "Accessories",
       "id": 22,
-      "likes": 1
+      "likes": 2
     },
     {
       "name": "GOTO GoTo™ Fine Swell 45 Case for OnePlus Nord N100",
@@ -270,11 +270,11 @@
       "color": "blue",
       "category": "Accessories",
       "feedbacks": [],
-      "likes": 1,
+      "likes": 2,
       "id": 23
     },
     {
-      "name": " GOTO GoTo™ Fine Swell 45 Case for T-Mobile® REVVL 4+",
+      "name": " GOTO GoTo™ Fine Swell 45 Case for T-Mobile® REVVL",
       "description": "Protect your phone from the unexpected with our GoTo™ slim phone case. With added texture for a better grip, we've got you covered. Just in case.",
       "price": 12,
       "image": "https://t-mobile.scene7.com/is/image/Tmusprod/610214665102-frontimage",
@@ -282,7 +282,7 @@
       "color": "blue",
       "category": "Accessories",
       "feedbacks": [],
-      "likes": 1,
+      "likes": 2,
       "id": 24
     }
   ]

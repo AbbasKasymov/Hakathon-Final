@@ -80,7 +80,11 @@ const FiltersBlock = ({ getProduct }) => {
           <MenuItem value="128">128</MenuItem>
         </Select>
       </FormControl>
-      <Button variant="contained" color="primary" onClick={resetFilter}>
+      <Button
+        variant="contained"
+        style={{ backgroundColor: "#FF1493" }}
+        onClick={resetFilter}
+      >
         {" "}
         Reset filters
       </Button>

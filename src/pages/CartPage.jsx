@@ -116,7 +116,11 @@ const CartPage = () => {
                       <Button
                         onClick={handleOpen}
                         variant="contained"
-                        style={{ width: "16rem", marginRight: "2rem" }}
+                        style={{
+                          width: "16rem",
+                          marginRight: "2rem",
+                          backgroundColor: "#FF1493",
+                        }}
                       >
                         Оплатить
                       </Button>
@@ -191,7 +195,10 @@ const CartPage = () => {
                             <Button
                               onClick={handleClose}
                               variant="contained"
-                              style={{ width: "100%" }}
+                              style={{
+                                width: "100%",
+                                backgroundColor: "#FF1493",
+                              }}
                             >
                               Оплатить
                             </Button>
