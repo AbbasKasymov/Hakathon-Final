@@ -13,14 +13,11 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import { clientContext } from "../contexts/ClientContext";
-import { Link } from "react-router-dom";
 import Backdrop from "@mui/material/Backdrop";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import Fade from "@mui/material/Fade";
-import Typography from "@mui/material/Typography";
 import * as React from "react";
-import { style } from "@mui/system";
 import Footer from "../components/Footer";
 
 const CartPage = () => {

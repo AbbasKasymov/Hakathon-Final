@@ -1,5 +1,4 @@
 import React from "react";
-import FiveGIcon from "@mui/icons-material/FiveG";
 import { Facebook, Instagram, Twitter, YouTube } from "@mui/icons-material";
 import { Container } from "react-bootstrap";
 

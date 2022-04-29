@@ -32,15 +32,21 @@ const ImageCollage = () => {
                 <p>Смотреть модели </p>
               </Link>
             </div>
-            <img
-              src="https://asiastore.kg/catalog/view/theme/default/image/cat/iphone_12_pro_max_pacific_blue_block-4.png"
-              alt=""
-              style={{
-                height: "70%",
-                width: "100%",
-                padding: "0px 30px 10px 30px",
-              }}
-            />
+            <div
+              data-aos="fade-down"
+              data-aos-easing="linear"
+              data-aos-duration="3000"
+            >
+              <img
+                src="https://asiastore.kg/catalog/view/theme/default/image/cat/iphone_12_pro_max_pacific_blue_block-4.png"
+                alt=""
+                style={{
+                  height: "100%",
+                  width: "100%",
+                  padding: "0px 30px 10px 30px",
+                }}
+              />
+            </div>
           </div>
 
           <div style={{ display: "flex", flexDirection: "column" }}>
@@ -52,15 +58,17 @@ const ImageCollage = () => {
                     <p>Смотреть модели </p>
                   </Link>
                 </div>
-                <img
-                  src="https://asiastore.kg/catalog/view/theme/default/image/cat/cat-macbookair.png"
-                  style={{
-                    width: "100%",
-                    padding: "80px 80px 0px 80px",
-                    height: "80%",
-                  }}
-                  alt=""
-                />
+                <div data-aos="fade-up" data-aos-duration="3000">
+                  <img
+                    src="https://asiastore.kg/catalog/view/theme/default/image/cat/cat-macbookair.png"
+                    style={{
+                      width: "100%",
+                      padding: "80px 80px 0px 80px",
+                      height: "80%",
+                    }}
+                    alt=""
+                  />
+                </div>
               </div>
 
               <div className="square">
@@ -70,14 +78,21 @@ const ImageCollage = () => {
                     <p>Смотреть модели </p>
                   </Link>
                 </div>
-                <img
-                  src="https://asiastore.kg/catalog/view/theme/default/image/cat/cat-ipadair.png"
-                  alt=""
-                  style={{
-                    width: "100%",
-                    padding: "40px 40px 0 40px",
-                  }}
-                />
+                <div
+                  data-aos="fade-left"
+                  data-aos-anchor="#example-anchor"
+                  data-aos-offset="1000"
+                  data-aos-duration="3000"
+                >
+                  <img
+                    src="https://asiastore.kg/catalog/view/theme/default/image/cat/cat-ipadair.png"
+                    alt=""
+                    style={{
+                      width: "100%",
+                      padding: "40px 40px 0 40px",
+                    }}
+                  />
+                </div>
               </div>
             </div>
             <div style={{ display: "flex", flexDirection: "row" }}>
@@ -88,11 +103,13 @@ const ImageCollage = () => {
                     <p>Смотреть модели </p>
                   </Link>
                 </div>
-                <img
-                  src="https://asiastore.kg/catalog/view/theme/default/image/cat/cat-jbl.png"
-                  alt=""
-                  style={{ width: "100%" }}
-                />
+                <div data-aos="zoom-out">
+                  <img
+                    src="https://asiastore.kg/catalog/view/theme/default/image/cat/cat-jbl.png"
+                    alt=""
+                    style={{ width: "100%" }}
+                  />
+                </div>
               </div>
 
               <div className="square">
@@ -102,11 +119,13 @@ const ImageCollage = () => {
                     <p>Смотреть модели </p>
                   </Link>
                 </div>
-                <img
-                  src="https://asiastore.kg/catalog/view/theme/default/image/cat/cat-tv.png"
-                  alt=""
-                  style={{ width: "100%" }}
-                />
+                <div data-aos="zoom-in-down">
+                  <img
+                    src="https://asiastore.kg/catalog/view/theme/default/image/cat/cat-tv.png"
+                    alt=""
+                    style={{ width: "100%" }}
+                  />
+                </div>
               </div>
 
               <div className="square">
@@ -116,11 +135,13 @@ const ImageCollage = () => {
                     <p>Смотреть модели </p>
                   </Link>
                 </div>
-                <img
-                  src="https://asiastore.kg/catalog/view/theme/default/image/cat/cat-aks2021.png"
-                  alt=""
-                  style={{ width: "100%", height: "70%" }}
-                />
+                <div data-aos="zoom-in-left">
+                  <img
+                    src="https://asiastore.kg/catalog/view/theme/default/image/cat/cat-aks2021.png"
+                    alt=""
+                    style={{ width: "100%", height: "100%" }}
+                  />
+                </div>
               </div>
             </div>
           </div>

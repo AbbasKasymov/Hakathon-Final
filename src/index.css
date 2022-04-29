@@ -178,7 +178,7 @@ a {
 }
 .notsquare {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   margin: 5px;
   background-color: #f6f6f6;
