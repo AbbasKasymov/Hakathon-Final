@@ -1,6 +1,6 @@
 import React, { useEffect, useReducer, useState } from "react";
 import axios from "axios";
-import { api } from "../helperss/const";
+import { api, newApi } from "../helperss/const";
 import {
   GoogleAuthProvider,
   onAuthStateChanged,
@@ -25,6 +25,7 @@ const initState = {
   watches: [],
   fiveg: [],
   hotspots: [],
+  card: [],
 };
 
 const reducer = (state = initState, action) => {
@@ -53,6 +54,8 @@ const reducer = (state = initState, action) => {
       return { ...state, hotspots: action.payload };
     case "GET_WATCHES":
       return { ...state, watches: action.payload };
+    case "SET_CARD_DATA":
+      return { ...state, card: action.payload };
     default:
       return state;
   }
@@ -270,6 +273,26 @@ const ClientContext = (props) => {
     dispatch(action);
   };
 
+  // const setCardData = (card, item) => {
+  //   localStorage.setItem("card", JSON.stringify(item));
+  //   const action = {
+  //     type: "SET_CARD_DATA",
+  //     payload: item.card,
+  //   };
+  //   dispatch(action);
+  // };
+  // const setCardData = async (newCardValue, card) => {
+  //   if (card.cardValue) {
+  //     card.cardValue.push(newCardValue);
+  //     await axios.patch(`${api}/${card.id}`, card);
+  //   } else {
+  //     card.cardValue = [newCardValue];
+  //     await axios.patch(`${api}/${card.id}`, card);
+  //   }
+  // };
+  const addCardInfo = async (cardInfo) => {
+    await axios.post(newApi, cardInfo);
+  };
   return (
     <clientContext.Provider
       value={{
@@ -291,6 +314,8 @@ const ClientContext = (props) => {
         getHotspots,
         getTablets,
         getWatches,
+        // setCardData,
+        addCardInfo: addCardInfo,
         watches: state.watches,
         tablets: state.tablets,
         hotspots: state.hotspots,
@@ -304,6 +329,7 @@ const ClientContext = (props) => {
         products: products,
         totalCount: totalCount,
         productsPerPage: productsPerPage,
+        card: state.card,
       }}
     >
       {props.children}

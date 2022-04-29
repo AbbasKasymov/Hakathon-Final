@@ -19,12 +19,50 @@ import Modal from "@mui/material/Modal";
 import Fade from "@mui/material/Fade";
 import * as React from "react";
 import Footer from "../components/Footer";
+import { AddCard } from "@mui/icons-material";
 
 const CartPage = () => {
   const data = useContext(clientContext);
-  const { getProductsFromCart, myCart, changeCountProductInCart } = data;
+  const {
+    getProductsFromCart,
+    myCart,
+    changeCountProductInCart,
+    setCardData,
+    card,
+    addCardInfo,
+  } = data;
 
   const [open, setOpen] = React.useState(false);
+  const [newCardInfo, setNewCardInfo] = React.useState({
+    owner: "",
+    cvv: "",
+    cardNumber: "",
+    expMon: "",
+    expYear: "",
+  });
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    for (let key in newCardInfo) {
+      if (!newCardInfo[key]) {
+        alert("Fullfill all inputs");
+        return;
+      }
+    }
+    addCardInfo(newCardInfo);
+    setNewCardInfo({
+      owner: "",
+      cvv: "",
+      cardNumber: "",
+      expMon: "",
+      expYear: "",
+    });
+  };
+  // const [owner, setOwner] = React.useState(false);
+  // const [cvv, setCvv] = React.useState();
+  // const [cardNumber, setCardNumber] = React.useState();
+  // const [expMon, setExpMon] = React.useState();
+  // const [expYear, setExpYear] = React.useState();
 
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -135,71 +173,113 @@ const CartPage = () => {
                       >
                         <Fade in={open}>
                           <Box sx={style}>
-                            <h2>Подтвердите оплату</h2>
-                            <div className="payment-modal">
+                            <form onSubmit={handleSubmit}>
+                              <h2>Подтвердите оплату</h2>
+                              <div className="payment-modal">
+                                <TextField
+                                  value={newCardInfo.owner}
+                                  onChange={(e) =>
+                                    setNewCardInfo({
+                                      ...newCardInfo,
+                                      owner: e.target.value,
+                                    })
+                                  }
+                                  label="OWNER"
+                                  id="outlined-size-small"
+                                  size="small"
+                                  style={{ marginRight: "15px" }}
+                                />
+                                <TextField
+                                  value={newCardInfo.cvv}
+                                  onChange={(e) =>
+                                    setNewCardInfo({
+                                      ...newCardInfo,
+                                      cvv: e.target.value,
+                                    })
+                                  }
+                                  label="CVV"
+                                  id="outlined-size-small"
+                                  size="small"
+                                  style={{ width: "6rem" }}
+                                  type="number"
+                                />
+                              </div>
                               <TextField
-                                label="OWNER"
+                                value={newCardInfo.cardNumber}
+                                onChange={(e) =>
+                                  setNewCardInfo({
+                                    ...newCardInfo,
+                                    cardNumber: e.target.value,
+                                  })
+                                }
+                                label="CARD NUMBER"
                                 id="outlined-size-small"
                                 size="small"
-                                style={{ marginRight: "15px" }}
-                              />
-                              <TextField
-                                label="CVV"
-                                id="outlined-size-small"
-                                size="small"
-                                style={{ width: "6rem" }}
+                                style={{ width: "100%", marginBottom: "15px" }}
                                 type="number"
                               />
-                            </div>
-                            <TextField
-                              label="CARD NUMBER"
-                              id="outlined-size-small"
-                              size="small"
-                              style={{ width: "100%", marginBottom: "15px" }}
-                              type="number"
-                            />
-                            <div className="payment-data">
-                              <div className="exp-date">
-                                <TextField
-                                  label="EXP MONTH"
-                                  id="outlined-size-small"
-                                  size="small"
-                                  style={{ marginRight: "15px", width: "7rem" }}
-                                  type="number"
-                                />
-                                <TextField
-                                  label="EXP YEAR"
-                                  id="outlined-size-small"
-                                  size="small"
-                                  style={{ width: "5rem" }}
-                                  type="number"
-                                />
+                              <div className="payment-data">
+                                <div className="exp-date">
+                                  <TextField
+                                    value={newCardInfo.expMon}
+                                    onChange={(e) =>
+                                      setNewCardInfo({
+                                        ...newCardInfo,
+                                        expMon: e.target.value,
+                                      })
+                                    }
+                                    label="EXP MONTH"
+                                    id="outlined-size-small"
+                                    size="small"
+                                    style={{
+                                      marginRight: "15px",
+                                      width: "7rem",
+                                    }}
+                                    type="number"
+                                  />
+                                  <TextField
+                                    value={newCardInfo.expYear}
+                                    onChange={(e) =>
+                                      setNewCardInfo({
+                                        ...newCardInfo,
+                                        expYear: e.target.value,
+                                      })
+                                    }
+                                    label="EXP YEAR"
+                                    id="outlined-size-small"
+                                    size="small"
+                                    style={{ width: "5rem" }}
+                                    type="number"
+                                  />
+                                </div>
+                                <div className="cards-icons">
+                                  <img
+                                    src="https://img.icons8.com/color/2x/visa.png"
+                                    alt=""
+                                  />
+                                  <img
+                                    src="https://img.icons8.com/fluency/2x/mastercard.png"
+                                    alt=""
+                                  />
+                                  <img
+                                    src="https://img.icons8.com/fluency/2x/amex.png"
+                                    alt=""
+                                  />
+                                </div>
                               </div>
-                              <div className="cards-icons">
-                                <img
-                                  src="https://img.icons8.com/color/2x/visa.png"
-                                  alt=""
-                                />
-                                <img
-                                  src="https://img.icons8.com/fluency/2x/mastercard.png"
-                                  alt=""
-                                />
-                                <img
-                                  src="https://img.icons8.com/fluency/2x/amex.png"
-                                  alt=""
-                                />
-                              </div>
-                            </div>
-                            <Button
-                              onClick={handleClose}
-                              variant="contained"
-                              style={{
-                                width: "100%",
-                                backgroundColor: "#FF1493",
-                              }}
-                            >
-                              Оплатить
-                            </Button>
+                              <Button
+                                // onSubmit={handleSubmit}
+                                onClick={handleClose}
+                                variant="contained"
+                                type="submit"
+                                style={{
+                                  width: "100%",
+                                  backgroundColor: "#FF1493",
+                                }}
+                              >
+                                Оплатить
+                              </Button>
+                            </form>
                           </Box>
                         </Fade>
                       </Modal>
