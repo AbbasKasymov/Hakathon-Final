@@ -21,6 +21,7 @@ import Fade from "@mui/material/Fade";
 import Typography from "@mui/material/Typography";
 import * as React from "react";
 import { style } from "@mui/system";
+import Footer from "../components/Footer";
 
 const CartPage = () => {
   const data = useContext(clientContext);
@@ -213,6 +214,7 @@ const CartPage = () => {
           </TableContainer>
         </Container>
       </div>
+      <Footer />
     </React.Fragment>
   );
 };

@@ -10,6 +10,7 @@ import {
 import React, { useEffect } from "react";
 import { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import Footer from "../components/Footer";
 import { adminContext } from "../contexts/AdminContext";
 
 const EditProductPage = () => {
@@ -52,108 +53,114 @@ const EditProductPage = () => {
   }
 
   return (
-    <Container>
-      <div className="add-edit-page">
-        <h2>Редактировать товар</h2>
-        <form onSubmit={handleSubmit}>
-          <TextField
-            onChange={(e) =>
-              setEditedProduct({ ...editedProduct, name: e.target.value })
-            }
-            value={editedProduct.name}
-            label="Введите название"
-            variant="standard"
-          />
-          <TextField
-            onChange={(e) =>
-              setEditedProduct({
-                ...editedProduct,
-                description: e.target.value,
-              })
-            }
-            value={editedProduct.description}
-            label="Введите описание"
-            variant="standard"
-          />
-          <TextField
-            type="number"
-            onChange={(e) =>
-              setEditedProduct({
-                ...editedProduct,
-                price: parseInt(e.target.value),
-              })
-            }
-            value={editedProduct.price}
-            label="Введите цену"
-            variant="standard"
-          />
-          <TextField
-            onChange={(e) =>
-              setEditedProduct({ ...editedProduct, image: e.target.value })
-            }
-            value={editedProduct.image}
-            label="Введите фото"
-            variant="standard"
-          />
-          <FormControl variant="standard">
-            <InputLabel id="color-select-label">Выберите цвет</InputLabel>
-            <Select
+    <React.Fragment>
+      <Container>
+        <div className="add-edit-page">
+          <h2>Редактировать товар</h2>
+          <form onSubmit={handleSubmit}>
+            <TextField
               onChange={(e) =>
-                setEditedProduct({ ...editedProduct, color: e.target.value })
+                setEditedProduct({ ...editedProduct, name: e.target.value })
               }
-              value={editedProduct.color}
-              label="Выберите цвет"
-              labelId="color-select-label"
-            >
-              <MenuItem value="black">Чёрный</MenuItem>
-              <MenuItem value="white">Белый</MenuItem>
-              <MenuItem value="blue">Синий</MenuItem>
-              <MenuItem value="pink">Розовый</MenuItem>
-              <MenuItem value="yellow">Жёлтый</MenuItem>
-              <MenuItem value="red">Красный</MenuItem>
-            </Select>
-          </FormControl>
-          <FormControl variant="standard">
-            <InputLabel id="size-select-label">Выберите память</InputLabel>
-            <Select
+              value={editedProduct.name}
+              label="Введите название"
+              variant="standard"
+            />
+            <TextField
               onChange={(e) =>
-                setEditedProduct({ ...editedProduct, memory: e.target.value })
+                setEditedProduct({
+                  ...editedProduct,
+                  description: e.target.value,
+                })
               }
-              value={editedProduct.memory}
-              label="Выберите память"
-              labelId="memory-select-label"
-            >
-              <MenuItem value="8">8</MenuItem>
-              <MenuItem value="16">16</MenuItem>
-              <MenuItem value="32">32</MenuItem>
-              <MenuItem value="64">64</MenuItem>
-              <MenuItem value="128">128</MenuItem>
-            </Select>
-          </FormControl>
-          <FormControl variant="standard">
-            <InputLabel id="size-select-label">Выберите категорию</InputLabel>
-            <Select
+              value={editedProduct.description}
+              label="Введите описание"
+              variant="standard"
+            />
+            <TextField
+              type="number"
               onChange={(e) =>
-                setEditedProduct({ ...editedProduct, category: e.target.value })
+                setEditedProduct({
+                  ...editedProduct,
+                  price: parseInt(e.target.value),
+                })
               }
-              value={editedProduct.category}
-              label="Выберите категорию"
-              labelId="category-select-label"
-            >
-              <MenuItem value="Cell phones">Cell phones</MenuItem>
-              <MenuItem value="5G phones">5G phones</MenuItem>
-              <MenuItem value="Tablets">Tablets</MenuItem>
-              <MenuItem value="Smartwatches">Smartwatches</MenuItem>
-              <MenuItem value="Hotspotes & more">Hotspotes & more</MenuItem>
-              <MenuItem value="Accessories">Accessories</MenuItem>
-            </Select>
-          </FormControl>
-          <Button type="submit" variant="outlined">
-            Добавить
-          </Button>
-        </form>
-      </div>
-    </Container>
+              value={editedProduct.price}
+              label="Введите цену"
+              variant="standard"
+            />
+            <TextField
+              onChange={(e) =>
+                setEditedProduct({ ...editedProduct, image: e.target.value })
+              }
+              value={editedProduct.image}
+              label="Введите фото"
+              variant="standard"
+            />
+            <FormControl variant="standard">
+              <InputLabel id="color-select-label">Выберите цвет</InputLabel>
+              <Select
+                onChange={(e) =>
+                  setEditedProduct({ ...editedProduct, color: e.target.value })
+                }
+                value={editedProduct.color}
+                label="Выберите цвет"
+                labelId="color-select-label"
+              >
+                <MenuItem value="black">Чёрный</MenuItem>
+                <MenuItem value="white">Белый</MenuItem>
+                <MenuItem value="blue">Синий</MenuItem>
+                <MenuItem value="pink">Розовый</MenuItem>
+                <MenuItem value="yellow">Жёлтый</MenuItem>
+                <MenuItem value="red">Красный</MenuItem>
+              </Select>
+            </FormControl>
+            <FormControl variant="standard">
+              <InputLabel id="size-select-label">Выберите память</InputLabel>
+              <Select
+                onChange={(e) =>
+                  setEditedProduct({ ...editedProduct, memory: e.target.value })
+                }
+                value={editedProduct.memory}
+                label="Выберите память"
+                labelId="memory-select-label"
+              >
+                <MenuItem value="8">8</MenuItem>
+                <MenuItem value="16">16</MenuItem>
+                <MenuItem value="32">32</MenuItem>
+                <MenuItem value="64">64</MenuItem>
+                <MenuItem value="128">128</MenuItem>
+              </Select>
+            </FormControl>
+            <FormControl variant="standard">
+              <InputLabel id="size-select-label">Выберите категорию</InputLabel>
+              <Select
+                onChange={(e) =>
+                  setEditedProduct({
+                    ...editedProduct,
+                    category: e.target.value,
+                  })
+                }
+                value={editedProduct.category}
+                label="Выберите категорию"
+                labelId="category-select-label"
+              >
+                <MenuItem value="Cell phones">Cell phones</MenuItem>
+                <MenuItem value="5G phones">5G phones</MenuItem>
+                <MenuItem value="Tablets">Tablets</MenuItem>
+                <MenuItem value="Smartwatches">Smartwatches</MenuItem>
+                <MenuItem value="Hotspotes & more">Hotspotes & more</MenuItem>
+                <MenuItem value="Accessories">Accessories</MenuItem>
+              </Select>
+            </FormControl>
+            <Button type="submit" variant="outlined">
+              Добавить
+            </Button>
+          </form>
+        </div>
+      </Container>
+      <Footer />
+    </React.Fragment>
   );
 };
 

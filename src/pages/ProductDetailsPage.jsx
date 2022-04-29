@@ -2,6 +2,7 @@ import { Details } from "@mui/icons-material";
 import { Button, Container, TextField } from "@mui/material";
 import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import Footer from "../components/Footer";
 import { clientContext } from "../contexts/ClientContext";
 
 const ProductDetailsPage = () => {
@@ -101,6 +102,7 @@ const ProductDetailsPage = () => {
           </div>
         </div>
       </Container>
+      <Footer />
     </div>
   );
 };
