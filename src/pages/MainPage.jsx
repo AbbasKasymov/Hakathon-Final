@@ -29,8 +29,9 @@ const MainPage = () => {
         </div>
         <MyPagination category="products" />
       </Container>
-
-      <ImageCollage />
+      <Container style={{ marginLeft: "0px" }}>
+        <ImageCollage />
+      </Container>
       <Footer />
     </div>
   );

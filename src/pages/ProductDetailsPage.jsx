@@ -3,6 +3,7 @@ import { Button, Container, TextField } from "@mui/material";
 import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Footer from "../components/Footer";
+import Recomendations from "../components/Recomendations";
 import { clientContext } from "../contexts/ClientContext";
 
 const ProductDetailsPage = () => {
@@ -101,6 +102,9 @@ const ProductDetailsPage = () => {
             ))}
           </div>
         </div>
+      </Container>
+      <Container>
+        <Recomendations />
       </Container>
       <Footer />
     </div>

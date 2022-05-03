@@ -25,6 +25,9 @@ a {
 .under-navbar a {
   width: 100%;
 }
+/* #root {
+  width: 100% !important;
+} */
 
 .under-navbar {
   background-color: #f6f6f6;
@@ -41,12 +44,19 @@ a {
 
 .products-list {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   margin: 50px 0;
   column-gap: 20px;
   row-gap: 20px;
 }
-
+.rec-card {
+  display: flex;
+  flex-direction: row;
+}
+.swiper-recomendation {
+  height: 300px !important;
+  object-fit: contain !important;
+}
 .products-card-image {
   object-fit: contain !important;
 }
@@ -62,7 +72,7 @@ a {
 }
 .filters-block {
   display: grid;
-  grid-template-columns: 250px 200px 200px 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   column-gap: 25px;
   align-items: center;
 }
@@ -242,4 +252,47 @@ a {
 
 .list li {
   list-style: none;
+}
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media all and (max-width: 768px) {
+  .under-navbar {
+    display: none;
+  }
+}
+
+@media all and (max-width: 1024px) {
+  .collage {
+    display: none !important;
+  }
 }

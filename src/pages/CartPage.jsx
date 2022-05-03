@@ -205,7 +205,7 @@ const CartPage = () => {
                                   label="CVV"
                                   id="outlined-size-small"
                                   size="small"
-                                  style={{ width: "6rem" }}
+                                  style={{ width: "30%" }}
                                   type="number"
                                 /> */}
                                 <NumberFormat

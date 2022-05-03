@@ -1,4 +1,4 @@
-import { Button, Pagination } from "@mui/material";
+import { Pagination } from "@mui/material";
 import React, { useContext } from "react";
 import { useLocation } from "react-router-dom";
 import { clientContext } from "../contexts/ClientContext";
