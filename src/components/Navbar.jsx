@@ -169,55 +169,55 @@ export default function MiniDrawer() {
                 </Link>
               </Typography>
 
-              <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
-                <IconButton
-                  size="large"
-                  aria-label="account of current user"
-                  aria-controls="menu-appbar"
-                  aria-haspopup="true"
-                  onClick={handleOpenNavMenu}
-                  color="inherit"
-                  style={{ color: "black" }}
-                >
-                  <MenuIcon />
-                </IconButton>
-                <Menu
-                  id="menu-appbar"
-                  anchorEl={anchorElNav}
-                  anchorOrigin={{
-                    vertical: "bottom",
-                    horizontal: "left",
-                  }}
-                  keepMounted
-                  transformOrigin={{
-                    vertical: "top",
-                    horizontal: "left",
-                  }}
-                  open={Boolean(anchorElNav)}
-                  onClose={handleCloseNavMenu}
-                  sx={{
-                    display: { xs: "block", md: "none" },
-                  }}
-                >
-                  <Link to="/admin-panel">
-                    {" "}
-                    <MenuItem onClick={handleCloseNavMenu}>
-                      <Typography
-                        textAlign="center"
-                        style={{ color: "black", background: "black" }}
-                      >
-                        Admin Panel
-                      </Typography>
-                    </MenuItem>
-                  </Link>
-                  <Link to="/admin-panel/add">
-                    {" "}
-                    <MenuItem onClick={handleCloseNavMenu}>
-                      <Typography textAlign="center">Add Products</Typography>
-                    </MenuItem>
-                  </Link>
-                </Menu>
-              </Box>
+              {/* <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}> */}
+              <IconButton
+                size="large"
+                aria-label="account of current user"
+                aria-controls="menu-appbar"
+                aria-haspopup="true"
+                onClick={handleOpenNavMenu}
+                color="inherit"
+                style={{ color: "black" }}
+              >
+                <MenuIcon />
+              </IconButton>
+              <Menu
+                id="menu-appbar"
+                anchorEl={anchorElNav}
+                anchorOrigin={{
+                  vertical: "bottom",
+                  horizontal: "left",
+                }}
+                keepMounted
+                transformOrigin={{
+                  vertical: "top",
+                  horizontal: "left",
+                }}
+                open={Boolean(anchorElNav)}
+                onClose={handleCloseNavMenu}
+                sx={{
+                  display: { xs: "block", md: "none" },
+                }}
+              >
+                <Link to="/admin-panel">
+                  {" "}
+                  <MenuItem onClick={handleCloseNavMenu}>
+                    <Typography
+                      textAlign="center"
+                      style={{ color: "black", background: "black" }}
+                    >
+                      Admin Panel
+                    </Typography>
+                  </MenuItem>
+                </Link>
+                <Link to="/admin-panel/add">
+                  {" "}
+                  <MenuItem onClick={handleCloseNavMenu}>
+                    <Typography textAlign="center">Add Products</Typography>
+                  </MenuItem>
+                </Link>
+              </Menu>
+              {/* </Box> */}
               <Typography
                 variant="h6"
                 noWrap
@@ -227,7 +227,7 @@ export default function MiniDrawer() {
                 <Link to="/">
                   <img
                     width={100}
-                    src="https://i.ytimg.com/vi/WaR8UOQ2p4k/maxresdefault.jpg"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ22gWEjrRUq_FpC6Rdzj9KV_ixac7njAjgwbjfjriknmN1PzpIdsJEXo-VL-5PLKjk3mE&usqp=CAU"
                     // src="https://assets.flagfamily.com/web/images/articles/color-t-mobile-logo-1629114229.png?xezmKhSwED7lKCYlMSVqsTlw6ruCWaZQ"
                     alt=""
                   />

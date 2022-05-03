@@ -187,7 +187,7 @@ const CartPage = () => {
                                   label="OWNER"
                                   id="outlined-size-small"
                                   size="small"
-                                  style={{ marginRight: "15px" }}
+                                  style={{ marginRight: "15px", width: "70%" }}
                                 />
                                 <TextField
                                   value={newCardInfo.cvv}
@@ -200,7 +200,7 @@ const CartPage = () => {
                                   label="CVV"
                                   id="outlined-size-small"
                                   size="small"
-                                  style={{ width: "6rem" }}
+                                  style={{ width: "30%" }}
                                   type="number"
                                 />
                               </div>
