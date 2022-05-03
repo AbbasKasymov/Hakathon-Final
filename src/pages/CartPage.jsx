@@ -20,6 +20,7 @@ import Fade from "@mui/material/Fade";
 import * as React from "react";
 import Footer from "../components/Footer";
 import { AddCard } from "@mui/icons-material";
+import NumberFormat from "react-number-format";
 
 const CartPage = () => {
   const data = useContext(clientContext);
@@ -184,12 +185,16 @@ const CartPage = () => {
                                       owner: e.target.value,
                                     })
                                   }
-                                  label="OWNER"
+                                  label="CARD OWNER"
                                   id="outlined-size-small"
                                   size="small"
-                                  style={{ marginRight: "15px" }}
+                                  style={{ marginRight: "15px", width: "70%" }}
                                 />
-                                <TextField
+                                {/* <NumberFormat
+                                  format="##########"
+                                  placeholder="CARD OWNER"
+                                /> */}
+                                {/* <TextField
                                   value={newCardInfo.cvv}
                                   onChange={(e) =>
                                     setNewCardInfo({
@@ -202,9 +207,24 @@ const CartPage = () => {
                                   size="small"
                                   style={{ width: "6rem" }}
                                   type="number"
+                                /> */}
+                                <NumberFormat
+                                  format="# # #"
+                                  placeholder="CVV"
+                                  value={newCardInfo.cvv}
+                                  onChange={(e) =>
+                                    setNewCardInfo({
+                                      ...newCardInfo,
+                                      cvv: e.target.value,
+                                    })
+                                  }
+                                  label="CVV"
+                                  id="outlined-size-small"
+                                  size="small"
+                                  style={{ width: "30%" }}
                                 />
                               </div>
-                              <TextField
+                              {/* <TextField
                                 value={newCardInfo.cardNumber}
                                 onChange={(e) =>
                                   setNewCardInfo({
@@ -217,10 +237,27 @@ const CartPage = () => {
                                 size="small"
                                 style={{ width: "100%", marginBottom: "15px" }}
                                 type="number"
+                              /> */}
+                              <NumberFormat
+                                format="#### #### #### ####"
+                                placeholder="Card Number"
+                                value={newCardInfo.cardNumber}
+                                onChange={(e) =>
+                                  setNewCardInfo({
+                                    ...newCardInfo,
+                                    cardNumber: e.target.value,
+                                  })
+                                }
+                                label="CARD NUMBER"
+                                id="outlined-size-small"
+                                size="small"
+                                style={{ width: "100%", marginBottom: "15px" }}
+                                // type="number"
                               />
+
                               <div className="payment-data">
                                 <div className="exp-date">
-                                  <TextField
+                                  {/* <TextField
                                     value={newCardInfo.expMon}
                                     onChange={(e) =>
                                       setNewCardInfo({
@@ -236,7 +273,27 @@ const CartPage = () => {
                                       width: "7rem",
                                     }}
                                     type="number"
+                                  /> */}
+                                  <NumberFormat
+                                    format="##/##"
+                                    placeholder="MM/YY"
+                                    mask={["M", "M", "Y", "Y"]}
+                                    value={newCardInfo.expMon}
+                                    onChange={(e) =>
+                                      setNewCardInfo({
+                                        ...newCardInfo,
+                                        expMon: e.target.value,
+                                      })
+                                    }
+                                    label="EXP MONTH"
+                                    id="outlined-size-small"
+                                    size="small"
+                                    style={{
+                                      marginRight: "15px",
+                                      width: "7rem",
+                                    }}
                                   />
+
                                   <TextField
                                     value={newCardInfo.expYear}
                                     onChange={(e) =>
